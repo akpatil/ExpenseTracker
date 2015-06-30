@@ -1,6 +1,100 @@
 <html>
 <body>
-<form action='pie_chart.php' method='post'>
+	<script>
+	/*function Total1()
+	{
+		var total = Housing() + Utilities() + HouseHold() + Groceries() + Living() + Transportation() + HealthCare() + PersonalLoan() + EatingOut() + Entertainment() + Children() + DebtsPayment();
+
+		document.getElementById('one').innerHTML=total;
+
+	}
+	*/
+
+	var total1=[h1+u1+hh1+g1+l1+t1+hc1+p1+eo1+e1+c1+d1];
+	var total2=[h2+u2+hh2+g2+l2+t2+hc2+p2+eo2+e2+c2+d2];
+	var total3=[h3+u3+hh3+g3+l3+t3+hc3+p3+eo3+e3+c3+d3];
+	var total4=[h4+u4+hh4+g4+l4+t4+hc4+p4+eo4+e4+c4+d4];
+
+	function startCalc()
+	{
+		var interval=setInterval("Total()", 1);
+	}
+
+	function stopCalc()
+	{
+		clearInterval(interval);
+	}
+
+	function Total()
+	{
+		//--------total1--------
+		var h1=document.expForm.w1housing.value;
+		var u1=document.expForm.w1utilities.value;
+		var hh1=document.expForm.w1household.value;
+		var g1=document.expForm.w1groceries.value;
+		var l1=document.expForm.w1living.value;
+		var t1=document.expForm.w1transport.value;
+		var hc1=document.expForm.w1health.value;
+		var p1=document.expForm.w1loan.value;
+		var eo1=document.expForm.w1eat.value;
+		var e1=document.expForm.w1entertain.value;
+		var c1=document.expForm.w1child.value;
+		var d1=document.expForm.w1debt.value;
+		document.expForm.one.value=(h1*1)+(u1*1)+(hh1*1)+(g1*1)+(l1*1)+(t1*1)+(hc1*1)+(p1*1)+(eo1*1)+(e1*1)+(c1*1)+(d1*1);
+
+		//-------total2--------
+
+		var h2=document.expForm.w2housing.value;
+		var u2=document.expForm.w2utilities.value;
+		var hh2=document.expForm.w2household.value;
+		var g2=document.expForm.w2groceries.value;
+		var l2=document.expForm.w2living.value;
+		var t2=document.expForm.w2transport.value;
+		var hc2=document.expForm.w2health.value;
+		var p2=document.expForm.w2loan.value;
+		var eo2=document.expForm.w2eat.value;
+		var e2=document.expForm.w2entertain.value;
+		var c2=document.expForm.w2child.value;
+		var d2=document.expForm.w2debt.value;
+		document.expForm.two.value=(h2*1)+(u2*1)+(hh2*1)+(g2*1)+(l2*1)+(t2*1)+(hc2*1)+(p2*1)+(eo2*1)+(e2*1)+(c2*1)+(d2*1);
+
+		//--------total3--------
+
+		var h3=document.expForm.w3housing.value;
+		var u3=document.expForm.w3utilities.value;
+		var hh3=document.expForm.w3household.value;
+		var g3=document.expForm.w3groceries.value;
+		var l3=document.expForm.w3living.value;
+		var t3=document.expForm.w3transport.value;
+		var hc3=document.expForm.w3health.value;
+		var p3=document.expForm.w3loan.value;
+		var eo3=document.expForm.w3eat.value;
+		var e3=document.expForm.w3entertain.value;
+		var c3=document.expForm.w3child.value;
+		var d3=document.expForm.w3debt.value;
+		document.expForm.three.value=(h3*1)+(u3*1)+(hh3*1)+(g3*1)+(l3*1)+(t3*1)+(hc3*1)+(p3*1)+(eo3*1)+(e3*1)+(c3*1)+(d3*1);
+
+		//--------total4--------
+
+		var h4=document.expForm.w4housing.value;
+		var u4=document.expForm.w4utilities.value;
+		var hh4=document.expForm.w4household.value;
+		var g4=document.expForm.w4groceries.value;
+		var l4=document.expForm.w4living.value;
+		var t4=document.expForm.w4transport.value;
+		var hc4=document.expForm.w4health.value;
+		var p4=document.expForm.w4loan.value;
+		var eo4=document.expForm.w4eat.value;
+		var e4=document.expForm.w4entertain.value;
+		var c4=document.expForm.w4child.value;
+		var d4=document.expForm.w4debt.value;
+		document.expForm.four.value=(h4*1)+(u4*1)+(hh4*1)+(g4*1)+(l4*1)+(t4*1)+(hc4*1)+(p4*1)+(eo4*1)+(e4*1)+(c4*1)+(d4*1);
+
+	}
+	</script>
+
+
+<form name='expForm' action='pie_chart.php' method='post'>
 Weekly expense calculator:</br>
 Enter your salary:<input type='number' name='sal'></br></br>
 <table>
@@ -13,97 +107,97 @@ Enter your salary:<input type='number' name='sal'></br></br>
 </tr>
 <tr>
 <td>Housing</td>
-<td><input type='number' name='w1housing'></td>
-<td><input type='number' name='w2housing'></td>
-<td><input type='number' name='w3housing'></td>
-<td><input type='number' name='w4housing'></td>
+<td><input type='number' name='w1housing' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2housing' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3housing' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4housing' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Utilities</td>
-<td><input type='number' name='w1utilities'></td>
-<td><input type='number' name='w2utilities'></td>
-<td><input type='number' name='w3utilities'></td>
-<td><input type='number' name='w4utilities'></td>
+<td><input type='number' name='w1utilities' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2utilities' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3utilities' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4utilities' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Household</td>
-<td><input type='number' name='w1household'></td>
-<td><input type='number' name='w2household'></td>
-<td><input type='number' name='w3household'></td>
-<td><input type='number' name='w4household'></td>
+<td><input type='number' name='w1household' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2household' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3household' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4household' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Groceries</td>
-<td><input type='number' name='w1groceries'></td>
-<td><input type='number' name='w2groceries'></td>
-<td><input type='number' name='w3groceries'></td>
-<td><input type='number' name='w4groceries'></td>
+<td><input type='number' name='w1groceries' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2groceries' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3groceries' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4groceries' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Living</td>
-<td><input type='number' name='w1living'></td>
-<td><input type='number' name='w2living'></td>
-<td><input type='number' name='w3living'></td>
-<td><input type='number' name='w4living'></td>
+<td><input type='number' name='w1living' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2living' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3living' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4living' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Transportation</td>
-<td><input type='number' name='w1transport'></td>
-<td><input type='number' name='w2transport'></td>
-<td><input type='number' name='w3transport'></td>
-<td><input type='number' name='w4transport'></td>
+<td><input type='number' name='w1transport' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2transport' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3transport' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4transport' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Health Care</td>
-<td><input type='number' name='w1health'></td>
-<td><input type='number' name='w2health'></td>
-<td><input type='number' name='w3health'></td>
-<td><input type='number' name='w4health'></td>
+<td><input type='number' name='w1health' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2health' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3health' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4health' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Personal Loan</td>
-<td><input type='number' name='w1loan'></td>
-<td><input type='number' name='w2loan'></td>
-<td><input type='number' name='w3loan'></td>
-<td><input type='number' name='w4loan'></td>
+<td><input type='number' name='w1loan' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2loan' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3loan' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4loan' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Eating Out</td>
-<td><input type='number' name='w1eat'></td>
-<td><input type='number' name='w2eat'></td>
-<td><input type='number' name='w3eat'></td>
-<td><input type='number' name='w4eat'></td>
+<td><input type='number' name='w1eat' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2eat' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3eat' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4eat' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Entertainment</td>
-<td><input type='number' name='w1entertain'></td>
-<td><input type='number' name='w2entertain'></td>
-<td><input type='number' name='w3entertain'></td>
-<td><input type='number' name='w4entertain'></td>
+<td><input type='number' name='w1entertain' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2entertain' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3entertain' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4entertain' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Children</td>
-<td><input type='number' name='w1child'></td>
-<td><input type='number' name='w2child'></td>
-<td><input type='number' name='w3child'></td>
-<td><input type='number' name='w4child'></td>
+<td><input type='number' name='w1child' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2child' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3child' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4child' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td>Debts Payment</td>
-<td><input type='number' name='w1debt'></td>
-<td><input type='number' name='w2debt'></td>
-<td><input type='number' name='w3debt'></td>
-<td><input type='number' name='w4debt'></td>
+<td><input type='number' name='w1debt' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w2debt' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w3debt' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
+<td><input type='number' name='w4debt' value=""onFocus="startCalc();" onBlur="stopCalc()";></td>
 </tr>
 <tr>
 <td colspan='5'align='center'>Total Expense At The End Of The week:</td>
 </tr>
 <tr>
 <td>Total Expense:</td>
-<td><input type='number'></td>
-<td><input type='number'></td>
-<td><input type='number'></td>
-<td><input type='number'></td>
+<td><input name='one' type='number'></td>
+<td><input name='two' type='number'></td>
+<td><input name='three' type='number'></td>
+<td><input name='four' type='number'></td>
 </tr>
 <tr>
 <td colspan='5'align='center'>You saved:</td>
