@@ -34,7 +34,7 @@ $total= ($housing*4)+($utilities*4)+($household*4)+($groceries*4)+($living*4)+($
 //echo $debtpayment;
 if ($total>$salary)
 {
-	header(Location:'http://localhost/hci6/expense-tracker.html');
+	header('Location:http://localhost/ExpenseTracker/expense-tracker.html');
 }
  $data= array($housing, $utilities, $household, $groceries, $living, $transportation, $healthcare, $personal_loan, $eatingout, $entertainment, $children, $debtpayment);
 //$data = array($a,$_POST['w1utilities'], $_POST['w1household'],$_POST['w1groceries'],$_POST['w1living'],$_POST['w1transport'],$_POST['w1health'],$_POST['w1loan'],$_POST['w1eat'],$_POST['w1entertain'],$_POST['w1child'],$_POST['w1debt']);
